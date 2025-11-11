@@ -1,0 +1,39 @@
+{
+  "name": "react-yaml-config-form",
+  "version": "1.0.0",
+  "description": "A React library that generates configuration forms from YAML schemas.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "Marc Mayol <marcmayolorell@gmail.com> (https://github.com/srmarcmayol)",
+  "homepage": "https://github.com/srmarcmayol/react-yaml-config-form",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srmarcmayol/react-yaml-config-form.git"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "vite --config example/vite.config.ts",
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "private": true,
+  "dependencies": {
+    "react": ">=17",
+    "react-dom": ">=17",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.8"
+  },
+  "license": "MIT"
+}

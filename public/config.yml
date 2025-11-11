@@ -1,0 +1,72 @@
+id: app_config
+title: App Configuration
+description: Example YAML to test the dynamic React YAML form
+
+fields:
+  - name: username
+    label: Username
+    type: text
+    required: true
+    minLength: 3
+    maxLength: 20
+    placeholder: Enter your username
+
+  - name: password
+    label: Password
+    type: password
+    required: true
+    minLength: 6
+    placeholder: Enter your password
+
+  - name: confirm
+    label: Confirm Password
+    type: password
+    required: true
+    matchField: password
+    message: Passwords must match
+
+  - name: email
+    label: Email
+    type: email
+    required: true
+    placeholder: example@email.com
+
+  - name: age
+    label: Age
+    type: number
+    min: 18
+    max: 100
+    required: true
+    message: Age must be between 18 and 100
+
+  - name: theme
+    label: Theme Color
+    type: color
+    default: "#3366ff"
+
+  - name: start_date
+    label: Start Date
+    type: date
+
+  - name: notifications
+    label: Enable Notifications
+    type: boolean
+    default: true
+
+  - name: country
+    label: Country
+    type: select
+    options: ["Spain", "France", "Germany", "Italy", "Portugal"]
+    required: true
+
+  - name: bio
+    label: Short Bio
+    type: textarea
+    maxLength: 200
+
+  - name: resume
+    label: Upload Resume
+    type: file
+    accept: ".pdf,.docx"
+
+submitLabel: Save Configuration
