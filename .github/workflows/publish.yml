@@ -7,23 +7,22 @@ on:
 
 jobs:
   publish:
-    name: Publish package to npm
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Use Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
 
-      - name: Install dependencies
+      - name: Install
         run: npm ci
 
-      - name: Build package
+      - name: Build
         run: npm run build
 
       - name: Publish to npm
