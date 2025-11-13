@@ -1,0 +1,21 @@
+# Development folders
+example/
+public/
+node_modules/
+.vscode/
+.git/
+.gitignore
+tsconfig.json
+vite.config.ts
+.idea/
+# Build tools
+*.log
+*.tgz
+
+# Source maps and cache
+*.map
+dist/**/*.map
+.cache/
+
+# Other
+.DS_Store
