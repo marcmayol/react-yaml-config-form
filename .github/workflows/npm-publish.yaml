@@ -3,7 +3,7 @@ name: Publish to npm
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
   publish:
@@ -13,16 +13,22 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Use Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
 
-      - name: Install
-        run: npm ci
+      - name: Clean npm cache and lock files
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm cache clean --force
 
-      - name: Build
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build package
         run: npm run build
 
       - name: Publish to npm
