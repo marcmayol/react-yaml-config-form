@@ -6,10 +6,10 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "author": "Marc Mayol <marcmayolorell@gmail.com> (https://github.com/srmarcmayol)",
-  "homepage": "https://github.com/srmarcmayol/react-yaml-config-form",
+  "homepage": "https://github.com/marcmayol/react-yaml-config-form",
   "repository": {
     "type": "git",
-    "url": "https://github.com/srmarcmayol/react-yaml-config-form.git"
+    "url": "https://github.com/marcmayol/react-yaml-config-form.git"
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
