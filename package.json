@@ -1,6 +1,6 @@
 {
   "name": "react-yaml-config-form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React library that generates configuration forms from YAML schemas.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
